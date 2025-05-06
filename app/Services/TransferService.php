@@ -53,5 +53,8 @@ class TransferService
                 'status' => 'completed',
             ]);
         });
+
+        $notificationService = app(notificationService::class);
+        $notificationService->notify($payee, $transfer);
     }
 }
